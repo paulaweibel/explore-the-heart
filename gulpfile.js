@@ -96,7 +96,7 @@ gulp.task('image', function () {
 // #######################################################
 // WATCH
 
-gulp.task('build', function () {
+gulp.task('starttheheart', function () {
 
     browserSync.init({
         server: './src'
