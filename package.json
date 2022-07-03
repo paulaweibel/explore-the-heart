@@ -21,6 +21,7 @@
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-html-minifier": "^0.1.8",
     "gulp-inject": "^5.0.5",
     "gulp-js-import": "^1.0.6",

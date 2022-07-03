@@ -20,6 +20,7 @@ var gulp = require('gulp'),
 var src = './src/',
     dist = './dist/';
 
+var deploy      = require('gulp-gh-pages');
 
 
 // #######################################################
@@ -87,6 +88,14 @@ gulp.task('image', function () {
         .pipe(browserSync.stream());
 
 
+});
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
 });
 
 
