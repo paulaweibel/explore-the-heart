@@ -96,15 +96,14 @@ gulp.task('image', function () {
 // #######################################################
 // WATCH
 
-gulp.task('default', function () {
+gulp.task('build', function () {
 
     browserSync.init({
         server: './src'
     });
-
-    gulp.watch([src + '*.html'], ['html']);
-    gulp.watch([src + 'assets/sass/*.scss'], ['scss']);
-    gulp.watch([src + 'assets/js/*.js'], ['js']);
-    gulp.watch([src + 'assets/images/*'], ['image']);
+    gulp.watch('*.html', gulp.series('html'));
+gulp.watch('app/css/*.css', gulp.series('scss'));
+  gulp.watch('app/js/*.js', gulp.series('js'));
+  gulp.watch('app/img/*', gulp.series('image'));
 
 });
